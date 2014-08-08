@@ -1,0 +1,39 @@
+@media screen and (min-width:$min-width){
+    .profile{
+        .form,
+        form{
+            max-width: 50%;
+        }
+        .actions{
+            &.right{
+                text-align: left;
+            }
+        }
+        .web-column{
+            .column+.column{
+                padding-top: 6%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $max-width) and (orientation : landscape ) {
+    .profile{
+        .form,
+        form{
+            margin-top: 0;
+        }
+        .actions{
+            &.right{}
+        }
+        .web-column{
+            display: block;
+            overflow: hidden;
+            .column{
+                display: block;
+                width: 50%;
+                float: left;
+            }
+        }
+    }
+}

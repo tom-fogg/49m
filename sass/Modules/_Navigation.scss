@@ -1,0 +1,167 @@
+.navigation{
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 600;
+    background: $background-blue;
+    
+    @include animate(background);
+    
+    /*&.open{
+        background: $background-blue;
+    }*/
+    
+    ul{
+        display: block;
+        width: 80%;
+        height: auto;
+        margin: 10%;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        li{
+            display: block;
+            position: relative;
+            width: 49%;
+            margin-bottom: 2%;
+            float: left;
+            &:nth-child(2n){
+                margin-left: 2%;
+            }
+            .sqr-holder{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            button{
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                border: none;
+                background: none;
+                margin: 0;
+                padding: 0;
+                .icon{
+                    display: block;
+                    position: absolute;
+                    width: 60%;
+                    height: 60%;
+                    top: 0;
+                    left: 50%;
+                    @include transform(translateX(-50%));
+                    svg{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .label{
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    top: 65%;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $max-width) and (orientation : landscape ) {
+    .navigation{
+        ul{
+            width: 80%;
+            margin: 5% 10%;
+            li{
+                width: 30%;
+                margin-left: 5%;
+                margin-bottom: 0%;
+                float: left;
+                &:nth-child(2n){
+                    margin-left: 5%;
+                }
+                &:nth-child(3n-2){
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $min-width) {
+    .navigation{
+        display: block !important;
+        width: auto;
+        max-width: 695px;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 382px;
+        bottom: auto;
+        background: transparent;
+        
+        @include transform3d(rotateY(0deg) translateX(0%));
+        ul{
+            width: 100%;
+            margin: 40px 0 0 40px;
+            overflow: hidden;
+            li{
+                width: 15%;
+                margin-bottom: 0%;
+                margin-left: 5%;
+                float: left;
+                &:first-child{
+                    margin-left: 0 !important;
+                }
+                &:nth-child(2n){
+                    margin-left: 5%;
+                }
+                button{
+                    .label{
+                        font-size: .8em;
+                        white-space: nowrap;
+                        width: 150%;
+                        left: 50%;
+                        right: auto;
+                        @include transform(translateX(-50%));
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .navigation{
+        ul{
+            margin: 40px 0 0 40px;
+            overflow: visible;
+            li{
+                margin-left: 3%;
+                &:nth-child(2n){
+                    margin-left: 3%;
+                }
+                button{
+                    .label{}
+                }
+            }
+        }
+    }
+}

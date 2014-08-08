@@ -1,0 +1,17 @@
+.column-holder{
+    display: block;
+    overflow: hidden;
+    .column{
+        display: block;
+        float: left;
+        &+.column{
+            margin-left: 5%;
+        }
+        &[data-flex="2"]{
+            width: 61.66%;
+        }
+        &[data-flex="1"]{
+            width: 33.33%;
+        }
+    }
+}

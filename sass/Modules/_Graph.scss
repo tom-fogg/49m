@@ -1,0 +1,230 @@
+.graph-holder{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+    .rectp{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .graph{
+        display: block;
+        position: absolute;
+        width: 86%;
+        height: auto;
+        top: 0;
+        left: 7%;
+        .graph-image{
+            display: block;
+            width: 100%;
+            height: auto;
+            svg{
+                display: block;
+                width: 100%;
+                height: auto;
+                path,
+                circle{
+                    @include animate(fill);
+                }
+            }
+        }
+        .label{
+            display: none;
+            position: absolute;
+            width: auto;
+            height: auto;
+            z-index: 10;
+            @include center();
+            .number{
+                display: block;
+                text-align: center;
+                font-size: 1.7em;
+                font-style: italic;
+                line-height: 1em;
+                font-weight: 400;
+            }
+            .description{
+                display: block;
+                text-align: center;
+                font-size: 1.14em;
+                line-height: 1em;
+                font-weight: 300;
+            }
+        }
+    }
+    .rating{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 86%;
+        .score{
+            display: block;
+            width: 96px;
+            height: 96px;
+            float: left;
+            background: #fff;
+            overflow: hidden;
+            @include border-radius(50%);
+            .inner{
+                display: block;
+                position: relative;
+                width: 84px;
+                height: 84px;
+                margin: 6px;
+                background: $green;
+                @include border-radius(50%);
+                .info{
+                    display: block;
+                    position: absolute;
+                    @include center();
+                    .number{
+                        display: block;
+                        font-size: 1.5em;
+                        font-style: italic;
+                        font-weight: 400;
+                        text-align: center;
+                        line-height: 0.9em;
+                    }
+                    .description{
+                        display: block;
+                        font-size: 1em;
+                        font-weight: 30;
+                        text-align: center;
+                        line-height: 1em;
+                    }
+                }
+            }
+        }
+        .label{
+            display: block;
+            position: absolute;
+            width: auto;
+            height: auto;
+            left: 96px;
+            line-height: 1em;
+            font-size: 0.85em;
+            font-weight: 300;
+            padding-left: 20px;
+            white-space: nowrap;
+            @include center-vertical();
+        }
+    }
+}
+
+@media screen and (max-width: $max-width) and (orientation : landscape ) {
+    .graph-holder{
+        width: 85%;
+        margin-left: 15%;
+        .rating{
+            .score{
+                width: 68px;
+                height: 68px;
+                .inner{
+                    width: 62px;
+                    height: 62px;
+                    margin: 3px;
+                }
+            }
+            .label{
+                left: 56px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .graph-holder{
+        width: 50%;
+        .graph{
+            .label{
+                .number{
+                    font-size: 3em;
+                }
+            }
+        }
+        .rating{
+            margin-top: 78%;
+            .score{
+                .inner{
+                    width: 88px;
+                    height: 88px;
+                    margin: 4px;
+                    .info{
+                        .number{
+                            font-size: 2em;
+                        }
+                        .description{
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .graph-holder{
+        width: 90%;
+        margin: 0 auto;
+        .graph{
+            .label{
+                .number{
+                    font-size: 3em;
+                }
+            }
+        }
+        .rating{
+            margin-top: 78%;
+            .score{
+                .inner{
+                    width: 88px;
+                    height: 88px;
+                    margin: 4px;
+                    .info{
+                        .number{
+                            font-size: 2em;
+                        }
+                        .description{
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    .graph-holder{
+        width: 70%;
+        margin: 0 auto;
+        .graph{
+            .label{
+                .number{
+                }
+            }
+        }
+        .rating{
+            .score{
+                .inner{
+                    .info{
+                        .number{
+                        }
+                        .description{
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

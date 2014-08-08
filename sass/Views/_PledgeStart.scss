@@ -1,0 +1,38 @@
+.pledge-start{
+    text-align: left;
+    .background{
+        display: block;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        left: 50%;
+        bottom: 0;
+        @include transform(translateX(-50%) translateY(0%));
+    }
+}
+
+@media screen and (min-width: $min-width) {
+    .pledge-start{
+    text-align: left;
+        .background{
+            display: block;
+            width: auto;
+            height: auto;
+            position: fixed;
+            left: 100%;
+            bottom: 0;
+            @include transform(translateX(-100%) translateY(0%));
+        }
+    }
+}
+
+@media screen and (max-width: $max-width) and (orientation : landscape ) {
+    .pledge-start{
+        padding-right: 50% !important;
+        .background{
+            width: 65%;
+            bottom: 50%;
+            @include transform(translateX(0%) translateY(50%) rotate(270deg));
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.know-your-number-start{
+    text-align: left;
+    .background{
+        display: block;
+        width: 200%;
+        height: auto;
+        position: fixed;
+        left: 50%;
+        bottom: 0;
+        @include transform(translateX(-50%) translateY(40%));
+    }
+}
+
+@media screen and (max-width: $max-width) and (orientation : landscape ) {
+    
+    .know-your-number-start{
+        padding-right: 50% !important;
+        .background{
+            width: 70%;
+            bottom: 50%;
+            @include transform(translateX(0%) translateY(50%));
+        }
+    }
+    
+}
+
+@media screen and (min-width: $min-width) {
+    .know-your-number-start{
+        text-align: left;
+        .background{
+            display: block;
+            width: 100%;
+            height: auto;
+            position: fixed;
+            left: 50%;
+            bottom: 0;
+            @include transform(translateX(-25%) translateY(40%));
+        }
+    }
+}

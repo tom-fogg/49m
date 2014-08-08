@@ -1,0 +1,27 @@
+.checklist {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .checklist li {
+    display: block;
+    position: relative;
+    width: auto;
+    height: 128px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    .checklist li:first-child {
+      border-top: none; }
+
+@media screen and (max-width: 480px) {
+  .checklist li {
+    height: 96px; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .checklist li {
+    height: 96px; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .checklist li {
+    height: 96px; } }
+
+/*# sourceMappingURL=_Checklist.css.map */

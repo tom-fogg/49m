@@ -1,0 +1,203 @@
+/*.swiper-container{
+    width: auto;
+    margin: 0 -40px 0 -40px;
+    .prev, .next{
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        z-index: 100;
+        @include center-vertical();
+        svg{
+            display: block;
+            position: absolute;
+            width: 200%;
+            height: auto;
+            @include center();
+            polygon{
+                fill: #fff;
+            }
+        }
+    }
+    .prev{
+        left: 0;
+    }
+    .next{
+        right: 0;
+    }
+    .swiper-wrapper{
+        .swiper-slide{
+            .image{
+                display: block;
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+            }
+            .accordion{
+                margin: 40px 0px 0 0px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .swiper-container{
+        margin: 0 0px 0 0px;
+        .swiper-wrapper{
+            .swiper-slide{
+                .image{
+                    width: 60%;
+                    margin: 19% auto;
+                }
+                .accordion{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .swiper-container{
+        margin: 0 0px 0 0px;
+        .swiper-wrapper{
+            .swiper-slide{
+                .image{
+                    width: 80%;
+                    margin: 40% auto;
+                }
+                .accordion{
+                    width: 90%;
+                    margin: 0 10% 0 -5%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    .swiper-container{
+        margin: 0 0px 0 0px;
+        .swiper-wrapper{
+            .swiper-slide{
+                .image{
+                    width: 60%;
+                    margin: 15% auto;
+                }
+                .accordion{
+                    width: 90%;
+                    margin: 0 15% 0 0%;
+                }
+            }
+        }
+    }
+}*/
+
+.slider{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    .slide{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+        .next, .prev{
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            overflow: hidden;
+            border: none;
+            background: none;
+            margin: 0;
+            padding: 0;
+            @include center-vertical();
+            svg{
+                display: block;
+                position: absolute;
+                width: 200%;
+                height: auto;
+                @include center();
+                polygon{
+                    fill: #fff;
+                }
+            }
+        }
+        .next{
+            right: -40px;
+        }
+        .prev{
+            left: -40px;
+        }
+        img{
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: $min-width) {
+    .slider{
+        .slide{
+            .next{ right: 0; }
+            .prev{ left: 0; }
+            img{
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $max-width) and (orientation : landscape ) {
+    .slider{
+        width: 70%;
+        margin: 0 auto;
+        .slide{
+            .next{}
+            .prev{}
+            img{}
+        }
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .slider{
+        .slide{
+            margin-top: 50%;
+            .next{}
+            .prev{}
+            img{}
+        }
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    .slider{
+        .slide{
+            margin-top: 15%;
+            .next{}
+            .prev{}
+            img{}
+        }
+    }
+    .accordion{
+        margin-top: 0 !important;
+    }
+}
+

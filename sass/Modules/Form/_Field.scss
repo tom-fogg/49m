@@ -1,0 +1,20 @@
+.field{
+    display: block;
+    position: relative;
+    margin-bottom: 5%;
+    &.has-tip{
+        padding-right: 40px;
+        .help{
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            right: 0;
+            padding: 0;
+            margin: 0;
+            border: none;
+            background: none;
+            @include center-vertical();
+        }
+    }
+}

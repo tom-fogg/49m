@@ -1,0 +1,100 @@
+.actions{
+    font-size: 0;
+    &.left{
+        text-align: left;
+    }
+    &.right{
+        text-align: right;
+    }
+    &.full{
+        button{
+            margin: 0 0 5% 0;
+            width: 100%;
+        }
+    }
+    button{
+        display: inline-block;
+        position: relative;
+        width: auto;
+        height: 40px;
+        padding: 0 40px 0 20px;
+        margin: 0 0 0 5%;
+        border: none;
+        font-size: 14pt;
+        line-height: 40px;
+        &:first-child{
+            margin-left: 0;
+        }
+        .icon{
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            right: 0;
+            @include center-vertical();
+            svg{
+                polygon{
+                    fill: #fff;
+                }
+            }
+        }
+        &.left-icon{
+            padding: 0 20px 0 40px;
+            text-align: left;
+            .icon{
+                right: auto;
+                left: 0;
+            }
+        }
+        
+        &.pink{
+            background: $pink;
+            color: #fff;
+        }
+        &.green{
+            background: $green;
+            color: #fff;
+        }
+        &.yellow{
+            background: $yellow;
+            color: #000;
+            .icon{
+                svg{
+                    polygon{
+                        fill: #000;
+                    }
+                }
+            }
+        }
+        &.facebook{
+            background: $facebook;
+            color: #fff;
+        }
+        &.twitter{
+            background: $twitter;
+            color: #fff;
+        }
+        
+    }
+}
+
+@media screen and (max-width: $max-width) {
+    .actions{
+        button{
+            font-size: 10pt;
+        }
+    }
+}
+@media screen and (min-width: $min-width) {
+    .actions{
+        margin: 50px auto;
+        button{
+            font-size: 10pt;
+        }
+        &.full{
+            button{
+                margin: 0 0 1.5% 0;
+            }
+        }
+    }
+}

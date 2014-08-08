@@ -1,0 +1,22 @@
+.know-your-number{
+    .house{
+        width: 90%;
+        margin: 5% 5% 0 5%;
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+    .know-your-number{
+        .house{}
+        .form,
+        form{
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+}

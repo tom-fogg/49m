@@ -1,0 +1,88 @@
+.avatar{
+    display: block;
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 0 auto 40px auto;
+    .rectl{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .image-holder{
+        display: block;
+        position: absolute;
+        width: 85%;
+        top: 0;
+        right: 0;
+        border: 12px solid #fff;
+        background: #fff;
+        overflow: hidden;
+        @include border-radius(50%);
+        .sqr{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .profile-image{
+            display: block;
+            position: absolute;
+            @include center();
+            &.portrait{
+                width: 100%;
+                height: auto;
+            }
+            &.landscape{
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+    .rating{
+        display: block;
+        position: absolute;
+        width: 42%;
+        height: auto;
+        left: 0;
+        bottom: 0;
+        border: 12px solid #fff;
+        overflow: hidden;
+        background: $green;
+        @include border-radius(50%);
+        .sqr{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        span{
+            display: block;
+            position: absolute;
+            font-size: 1.7em;
+            @include center();
+        }
+    }
+}
+
+@media screen and (max-width: $max-width) and (orientation : landscape ) {
+    .avatar{
+        width: 90%;
+        margin: 0 10% 0 0;
+    }
+}
+
+@media screen and (min-width:$min-width) {
+    .avatar{
+        width: 60%;
+        margin: 20% auto 40px auto;
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .avatar{
+        width: 80%;
+        margin: 15% auto 40px auto;
+    }
+}

@@ -1,0 +1,230 @@
+.field.checkbox{
+    display: block;
+    width: auto;
+    height: 128px;
+    input[type="checkbox"]{
+        display: none;
+        &:checked+label{
+            .toggle{
+                background: $radio-green;
+                .o{
+                    background: darken($radio-green, 15%);
+                    .inner{
+                        background: $radio-green;
+                    }
+                }
+                .i{
+                    background: darken($radio-green, 15%);
+                }
+                .button{
+                    left: 75%;
+                }
+            }
+        }
+    }
+    label{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 128px;
+        padding: 0 128px 0 20px;
+        .toggle{
+            display: block;
+            position: absolute;
+            width: 84px;
+            height: auto;
+            top: 50%;
+            right: 64px;
+            background: $radio-red;
+            @include animate(background);
+            @include border-radius(6px);
+            @include box-shadow(rgba(0,0,0,.2) 0 1px 0 inset);
+            @include transform(translateX(50%) translateY(-50%));
+            .check{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .o{
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 50%;
+                left: 25%;
+                background: darken($radio-red, 15%);
+                @include animate(background);
+                @include border-radius(50%);
+                @include box-shadow(rgba(0,0,0,.2) 0 1px 0 inset);
+                @include transform(translateX(-50%) translateY(-50%));
+                z-index: 1;
+                .inner{
+                    display: block;
+                    position: absolute;
+                    width: 12px;
+                    height: 12px;
+                    top: 50%;
+                    left: 50%;
+                    background: $radio-red;
+                    @include animate(background);
+                    @include border-radius(50%);
+                    @include box-shadow(rgba(0,0,0,.2) 0 1px 0);
+                    @include transform(translateX(-50%) translateY(-50%));
+                    
+                }
+            }
+            .i{
+                display: block;
+                position: absolute;
+                width: 4px;
+                height: 20px;
+                top: 50%;
+                left: 75%;
+                background: darken($radio-red, 15%);
+                @include animate(background);
+                @include box-shadow(rgba(0,0,0,.2) 0 1px 0 inset);
+                @include transform(translateX(-50%) translateY(-50%));
+                z-index: 1;
+            }
+            .button{
+                display: block;
+                position: absolute;
+                width: 40%;
+                height: 80%;
+                top: 50%;
+                left: 25%;
+                background: #e7e7e0;
+                @include border-radius(4px);
+                @include box-shadow(rgba(0,0,0,.2) 0 1px 0);
+                @include transform(translateX(-50%) translateY(-50%));
+                @include animate(left);
+                z-index: 5;
+                .stripe{
+                    display: block;
+                    position: absolute;
+                    width: 2px;
+                    height: 50%;
+                    top: 50%;
+                    left: 50%;
+                    background: darken(#e7e7e0,10%);
+                    @include box-shadow(rgba(0,0,0,.2) 0 1px 0);
+                    @include transform(translateX(-50%) translateY(-50%));
+                    &+.stripe{
+                        @include transform(translateX(-350%) translateY(-50%));
+                    }
+                    &+.stripe+.stripe{
+                        @include transform(translateX(250%) translateY(-50%));
+                    }
+                }
+            }
+        }
+        .description{
+            display: inline-block;
+            width: auto;
+            height: 128px;
+            text-align: left;
+            span{
+                display: block;
+                position: absolute;
+                left: 20px;
+                right: 128px;
+                font-size: .9em;
+                line-height: 1.2em;
+                @include center-vertical();
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $max-width) {
+    .field.checkbox{
+        label{
+            height: 96px;
+            padding: 0 96px 0 20px;
+            .toggle{
+                width: 96px - 22px;
+                right: 96px / 2;
+                .o{
+                    .inner{}
+                }
+                .i{
+                
+                }
+                .button{
+                    .stripe{
+                    
+                    }
+                }
+            }
+            .description{
+                span{
+                
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .field.checkbox{
+        label{
+            height: 96px;
+            padding: 0 96px 0 20px;
+            .toggle{
+                width: 96px - 22px;
+                right: 96px / 2;
+                .o{
+                    .inner{}
+                }
+                .i{
+                
+                }
+                .button{
+                    .stripe{
+                    
+                    }
+                }
+            }
+            .description{
+                span{
+                
+                }
+            }
+        }
+    }
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    .field.checkbox{
+        label{
+            height: 96px;
+            padding: 0 96px 0 20px;
+            .toggle{
+                width: 96px - 22px;
+                right: 96px / 2;
+                .o{
+                    .inner{}
+                }
+                .i{
+                
+                }
+                .button{
+                    .stripe{
+                    
+                    }
+                }
+            }
+            .description{
+                span{
+                
+                }
+            }
+        }
+    }
+}

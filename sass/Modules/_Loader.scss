@@ -1,0 +1,46 @@
+.loader{
+    display: none;
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    background: #fff;
+    z-index: 1000;
+    @include center();
+    @include border-radius(50%);
+    @include box-shadow(rgba(0,0,0,.2) 0 2px 0);
+    .icon{
+        display: block;
+        width: 64px;
+        height: 64px;
+    }
+    svg{
+        display: block;
+        width: 48px;
+        height: 48px;
+        margin: 8px;
+    }
+    
+    &.overlay{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,.7);
+        @include transform(translateX(0) translateY(0));
+        @include border-radius(0);
+        @include box-shadow(rgba(0,0,0,.2) 0 2px 0);
+        .icon{
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            background: #fff;
+            @include center();
+            @include border-radius(50%);
+            @include box-shadow(rgba(0,0,0,.2) 0 2px 0);
+        }
+    }
+    
+}

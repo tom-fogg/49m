@@ -1,0 +1,48 @@
+* input,
+* select,
+* textarea,
+* button {
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+}
+
+body{
+    font-family: "Rotobo", sans-serif;
+    font-size: 10pt;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+}
+
+h1{
+    font-size: 1.7em;
+    font-weight: 400;
+}
+h2{
+    font-size: 1.28em;
+    font-weight: 400;
+}
+strong{
+    font-weight: 400;
+}
+
+@media screen and (max-width: $max-width) {
+    body{
+        font-size: 10pt;
+    }
+}
+
+@media screen and (min-width: $min-width) {
+    body{
+        font-size: 10pt;
+    }
+    h1{
+        font-size: 2.4em;
+    }
+}
+
+@media screen and (max-width: $max-width) and (orientation : landscape ) {
+    body{
+        text-align: left;
+    }
+}

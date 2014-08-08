@@ -1,0 +1,75 @@
+.field.simple-checkbox{
+    display: block;
+    width: auto;
+    height: 128px;
+    label{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 128px;
+        padding: 0 128px 0 20px;
+        .toggle{
+            display: block;
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            top: 50%;
+            right: 64px;
+            background: transparent;
+            @include transform(translateX(50%) translateY(-50%));
+            svg{
+                display: block;
+                width: 48px !important;
+                height: 48px !important;
+            }
+            &.on{
+                display: none;
+            }
+            &.off{
+                display: block;
+            }
+        }
+        &.on{
+            .toggle{
+                &.on{
+                    display: block;
+                }
+                &.off{
+                    display: none;
+                }
+            }
+        }
+        .description{
+            display: inline-block;
+            width: auto;
+            height: 128px;
+            text-align: left;
+            span{
+                display: block;
+                position: absolute;
+                left: 20px;
+                right: 128px;
+                font-size: .9em;
+                line-height: 1.2em;
+                @include center-vertical();
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $max-width) {
+    .field.simple-checkbox{
+        label{
+            height: 96px;
+            padding: 0 96px 0 20px;
+            .toggle{
+                
+            }
+            .description{
+                span{
+                
+                }
+            }
+        }
+    }
+}

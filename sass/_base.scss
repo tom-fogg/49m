@@ -1,0 +1,38 @@
+$darkgreen:#39b54a;
+$green:    #70D551;
+$yellow:   #FFF100;
+$orange:   #FF931E;
+$red:      #ED1C24;
+$gray:     #e6e6e6;
+$pink:     #ff2086;
+
+$radio-green: #22c45c;
+$radio-red: #fc573f;
+
+$background-blue: #0096ee;
+$button-pink: #ff2086;
+
+$facebook: #0071bc;
+$twitter: #09cdd6 ;
+
+$transition-speed: 400ms;
+$transition-easing: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+$max-width : 960px;
+$min-width : 960px;
+
+
+@mixin center () {
+    top: 50%;
+    left: 50%;
+    @include transform(translateX(-50%) translateY(-50%));
+}
+@mixin center-vertical () {
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+@mixin animate ($props) {
+    @include transition-property($props);
+    @include transition-duration($transition-speed);
+    @include transition-timing-function($transition-easing);
+}

@@ -1,0 +1,80 @@
+.accordion{
+    display: block;
+    width: auto;
+    margin: 40px -40px 0 -40px;
+    padding: 0;
+    list-style: none;
+    .accordion-li{
+        display: block;
+        border-bottom: 4px solid rgba(0,0,0,.1);
+        @include animate(border);
+        &:last-child{
+            border-top: none;
+        }
+        .title{
+            display: block;
+            position: relative;
+            width: auto;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 40px 0 20px;
+            font-size: .8em;
+            text-align: left;
+            border-top: 1px solid rgba(255,255,255,.2);
+            border-bottom: 1px solid rgba(0,0,0,.2);
+            .label{
+                display: inline-block;
+                line-height: 1em;
+            }
+            .icon{
+                display: block;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 0;
+                right: 0;
+                .stripe{
+                    display: block;
+                    position: absolute;
+                    width: 4px;
+                    height: 16px;
+                    top: 50%;
+                    left: 50%;
+                    background: #fff;
+                    @include animate(transform);
+                    @include transform(translateX(-50%) translateY(-50%));
+                    &.horizontal{
+                        @include transform(translateX(-50%) translateY(-50%) rotate(90deg));
+                    }
+                }
+            }
+        }
+        .content{
+            display: none;
+            border-top: 0px solid #efefef;
+            background: #fff;
+            color: #4d4d4d;
+            overflow: hidden;
+            overflow-y: auto;
+            @include animate(border);
+        }
+        &.open{
+            border-bottom: 0px solid rgba(0,0,0,.1);
+            .title{
+                .icon{
+                    .stripe{
+                        &.vertical{
+                            @include transform(translateX(-50%) translateY(-50%) rotate(90deg));
+                        }
+                        &.horizontal{
+                            @include transform(translateX(-50%) translateY(-50%) rotate(270deg));
+                        }
+                    }
+                }
+            }
+            .content{
+                border-top: 4px solid #dedede;
+            }
+        }
+    }
+}
