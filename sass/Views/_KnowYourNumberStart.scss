@@ -1,5 +1,6 @@
 .know-your-number-start{
     text-align: left;
+    /*padding-right: 60% !important;*/
     .background{
         display: block;
         width: 200%;
@@ -27,6 +28,7 @@
 @media screen and (min-width: $min-width) {
     .know-your-number-start{
         text-align: left;
+        padding-right: 60% !important;
         .background{
             display: block;
             width: 100%;

@@ -31,6 +31,7 @@ body{
     overflow: hidden;
     overflow-y: auto;
     background: $background-blue;
+    -webkit-overflow-scrolling: touch;
     
     @include animate(background padding);
     
@@ -54,6 +55,7 @@ body{
             top: 0;
             left: 0;
             padding: 40px;
+            -webkit-overflow-scrolling: touch;
         }
     }
 }

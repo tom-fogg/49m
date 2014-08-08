@@ -57,6 +57,7 @@
             overflow: hidden;
             overflow-y: auto;
             @include animate(border);
+            -webkit-overflow-scrolling: touch;
         }
         &.open{
             border-bottom: 0px solid rgba(0,0,0,.1);

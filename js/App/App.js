@@ -38,6 +38,13 @@ var App = {};
             App.ResetSVGSize($('svg'));
         }
         
+        setTimeout( function () {
+            App.VerticallyCenter();
+            $(window).trigger('scroll');
+            $('.wrapper').trigger('scroll');
+            
+        }, 300);
+        
     };
     
     App.Events = function () {
@@ -47,7 +54,10 @@ var App = {};
             if ( $('svg').length > 0 ) {
                 App.ResetSVGSize($('svg'));
             }
+            App.VerticallyCenter();
         });
+        
+        
         
     };
     
@@ -66,6 +76,41 @@ var App = {};
         }
     };
     
+    App.VerticallyCenter = function () {
+        if ( $(window).width() > 960) {
+            $('[data-vcenter="true"]').each(function (i, el) {
+                
+                var self = $(el);
+                var mTop = (($(window).height() - self.outerHeight() - 80) / 2) - 140;
+                
+                if (mTop < 0) {
+                    mTop = 0;
+                }
+                
+                self.css({
+                    'margin-top': mTop
+                });
+                
+            });
+        } else {
+            
+            $('[data-vcenter="true"]').each(function (i, el) {
+                var self = $(el);
+                if (self.attr('style') == undefined) {
+                    return;
+                }
+                var styles = self.attr('style').split(';');
+                for ( var i = 0; i <= styles.length-1; i++ ) {
+                    if ( (styles[i].toString()).indexOf('margin') > -1 ) {
+                        var css = styles.splice(styles[i],1);
+                        self.attr('style', self.attr('style').replace(css.toString(), ''));
+                    }
+                }
+                
+            });
+        }
+    };
+    
     function ShowHidden (e) {
         e.preventDefault();
         var id = $(this).data('show');
@@ -79,11 +124,12 @@ var App = {};
     };
     
     App.ResetSVGSize = function (self) {
-        console.log(self);
         self.each(function(i, svg) {
             var viewbox = svg.getAttribute('viewBox').split(/\s+|,/);
             var ratio = parseInt(viewbox[2])/parseInt(viewbox[3]);
-            
+            $(svg).css({
+                'height': 'auto'
+            });
             $(svg).css({
                 'height' : $(svg).width() / ratio
             });

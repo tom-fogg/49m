@@ -61,10 +61,25 @@ var Navigation = {};
         App.Modules();
     };
     
+    function Sticky (wrapper, navigation) {
+        console.log(wrapper.scrollTop())
+        if (wrapper.scrollTop() > 40) {
+            navigation.addClass('sticky');
+        } else {
+            navigation.removeClass('sticky');
+        }
+        App.ResetSVGSize($('svg'));
+        
+    };
+    
     function Events () {
         
         $(document).on('click', '[data-action="toggle-menu"]', Navigation.Toggle);
         $(document).on('click', '[data-action="load-page"]', Navigation.LoadPage);
+        
+        $('.wrapper').on('scroll', function () {
+            Sticky($(this), $('.navigation'));
+        });
         
     };
     

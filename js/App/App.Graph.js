@@ -14,6 +14,11 @@ var Graph = {};
                 setTimeout(function() {
                     self.find('.graphmark-'+index)[0].style.fill = Graph.GetColor(index, 60, colors);
                     self.find('.graphcenter')[0].style.fill = Graph.GetColor(index, 60, colors);
+                    if (Graph.GetColor(index, 60, colors) === "#FFF100") {
+                        self.find('.graph .label')[0].style.color = '#4d4d4d';
+                    } else {
+                        self.find('.graph .label')[0].style.color = '#fff';
+                    }
                 }, Graph.Timing(time, bars, index));
             })(i);
         }
