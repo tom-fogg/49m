@@ -1,0 +1,41 @@
+{
+    "history" : [
+        {
+            "month" : "JAN",
+            "usage" : 21
+        },{
+            "month" : "FEB",
+            "usage" : 30.8
+        },{
+            "month" : "MAR",
+            "usage" : 34.2
+        },{
+            "month" : "APR",
+            "usage" : 36.4
+        },{
+            "month" : "MAY",
+            "usage" : 26
+        },{
+            "month" : "JUN",
+            "usage" : 79
+        },{
+            "month" : "JUL",
+            "usage" : 47
+        },{
+            "month" : "AUG",
+            "usage" : 84
+        },{
+            "month" : "SEP",
+            "usage" : 18
+        },{
+            "month" : "OCT",
+            "usage" : 33
+        },{
+            "month" : "NOV",
+            "usage" : 50
+        },{
+            "month" : "DEC",
+            "usage" : 49
+        }
+    ]
+}

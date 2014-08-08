@@ -1,0 +1,80 @@
+<div class="profile">
+    <div class="web-column">
+        <div class="column" data-flex="50">
+            <div class="avatar">
+                <img class="rectl" src="img/rectl.png">
+                <div class="image-holder">
+                    <img class="sqr" src="img/sqr.png">
+                    <img class="profile-image" src="img/profile.jpg" onload="
+                        (function (img) { 
+                            console.log(img);
+                            if ( (img.clientWidth / img.clientHeight) > 1) { 
+                                img.className = img.className + ' landscape'; 
+                            } else { 
+                                img.className = img.className + ' portrait'; 
+                            } 
+                        })(this)
+                    ">
+                </div>
+                <div class="rating" data-action="load-page" data-url="YourPledge">
+                    <img class="sqr" src="img/sqr.png">
+                    <span>25.5</span>
+                </div>
+            </div>
+        </div>
+        <div class="column" data-flex="50">
+            <div class="web-only">
+                <h1>Joshua Knightly</h1>
+                <p>I don’t just know my number. I choose to live by it.</p>
+            </div>
+            <form>
+                <div class="field">
+                    <div class="input">
+                        <input type="text" name="uname" id="uname" placeholder="Name Surname" value="Joshua Knightly">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="input">
+                        <input type="text" name="unumber" id="unumber" placeholder="Mobile Number" value="072 229 9643">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="input">
+                        <input type="email" name="uemail" id="uemail" placeholder="Email Address" value="j.knightly@gmail.com">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="input has-icon">
+                        <select name="month">
+                            <option>Baysville</option>
+                            <option>Beacon Bay</option>
+                            <option>Berea</option>
+                            <option>Bonnie Doon</option>
+                            <option selected>Bunker's Hill</option>
+                            <option>Cove Rock</option>
+                            <option>Gonubie</option>
+                            <option>Kaysers Beach</option>
+                            <option>Kidd's Beach</option>
+                            <option>Kwelera</option>
+                            <option>Nahoon
+                            <option>Nahoon Mouth</option>
+                            <option>Quigney</option>
+                            <option>Selborne</option>
+                            <option>Southernwood</option>
+                            <option>Stirling</option>
+                            <option>Sunnyridge</option>
+                            <option>Vincent</option>
+                        </select>
+                        <div class="icon" data-svg="false" data-icon="arrow-right"></div>
+                    </div>
+                </div>
+                <div class="actions right">
+                    <button class="pink" data-action="load-page" data-url="KnowYourNumber">
+                        <div class="label">SAVE</div>
+                        <div class="icon" data-svg="false" data-icon="arrow-right"></div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

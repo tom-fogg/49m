@@ -1,0 +1,73 @@
+<div class="know-your-number">
+    
+    <div class="web-column">
+        <div class="column" data-flex="40">
+            <h1>Know Your Number</h1>
+            <p><strong>It's simple and easy to do!</strong></p>
+            <p>It's calculated using an indication of one month's kWh usage, your usable square meters, and even takes into account the colder winter months and projecting over a 12 month period. Remember that your number is an annual number!</p>
+
+            <form>
+                <div class="field has-tip" id="calculator-form">
+                    <div class="input">
+                        <input type="number" name="kwhpm" id="kwhpm" placeholder="kWh per month">
+                    </div>
+                    <button class="help" data-svg="false" data-icon="help" data-action="tooltip" data-tipid="1"></button>
+                </div>
+                <div class="field has-tip">
+                    <div class="input has-icon">
+                        <select name="month">
+                            <option>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option selected>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                            <option>November</option>
+                            <option>December</option>
+                        </select>
+                        <div class="icon" data-svg="false" data-icon="arrow-right"></div>
+                    </div>
+                </div>
+                <div class="field has-tip">
+                    <div class="input has-icon">
+                        <input type="number" name="sqrm" id="sqrm" placeholder="Square Meters">
+                        <!--<div class="icon" data-svg="false" data-icon="arrow-right"></div>-->
+                    </div>
+                    <button class="help" data-svg="false" data-icon="help" data-action="tooltip" data-tipid="2"></button>
+                </div>
+                <div class="actions left">
+                    <button class="pink" id="calculate-btn">
+                        <div class="label">CALCULATE</div>
+                        <div class="icon" data-svg="false" data-icon="arrow-right"></div>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="column web-only" data-flex="60">
+            <img class="house" src="img/house2x.png">
+        </div>
+    </div>
+    
+    
+    <div class="tip-holder" data-tipid="1">
+        <div class="arrow"></div>
+        <div class="tip">
+            <h2>How do I find out my kilowatt-hours?</h2>
+            <p>Grab your electricity bill.  This figure is indicated in either units or kWh on the top right of your bill.</p>
+        </div>
+    </div>
+    <div class="tip-holder" data-tipid="2">
+        <div class="arrow"></div>
+        <div class="tip">
+            <h2>How do I know how many square meters of usable space my home has?</h2>
+            <p>Just measure the length and width of each room in your house! </p>
+            <p>Multiply length by width for each room and then add all the rooms together.</p>
+            <p>SQM = (width x length) + (width x length)</p>
+        </div>
+    </div>
+    
+</div>
